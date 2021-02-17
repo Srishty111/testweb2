@@ -1,0 +1,37 @@
+.edit{
+ 
+    position: relative;
+}
+
+.edit>button{
+    position: absolute;
+    top:-60px;
+    right:100px;
+}
+
+.edit-card-image >img{
+    height: 200px;
+    width: 200px;
+}
+.edit-card{
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.edit-card-image{
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    margin-bottom:40px ;
+}
+.edit-plan{
+    border: .3px solid rgb(202, 198, 198);
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 100px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top:20px;
+    padding-bottom:20px;
+}

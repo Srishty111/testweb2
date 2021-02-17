@@ -1,0 +1,83 @@
+/* .excercise-image{
+    width: 150px;
+    height: 150px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.excercise{
+  
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: space-evenly;
+    border:0.5px solid rgb(218, 213, 213);
+    padding-top: 20px;
+    box-shadow: 1px 1px 100px 1px  rgb(230, 230, 230);
+}
+.createplan{
+    width: 80%;
+    margin:100px auto;
+    
+  
+}
+.right-exercise-part{
+   
+}
+
+.choosing-dates{
+    margin-top: 100px;
+  
+    display: flex;
+    justify-content: space-around;
+}
+
+.create-plan-heading{
+    margin-top:50px;
+    margin-left: 37%;
+    
+    color:grey;
+    font-family: cursive;
+}
+.create-plan-heading >h5{
+    font-size: 30px;
+}
+.create-plan-heading >h5:first-letter {
+    font-size: 30pt;
+    display: block;
+    float: left;
+    margin: 0 5px 5px 0;
+  }
+  
+ .create-plan-heading>h5:hover{
+     color: lavender;
+ } 
+.creating-plan-button{
+  
+   
+}
+.creating-plan-button >button{
+    margin: 100px auto;
+    align-items: center;
+    margin-left:40%;
+
+    background-color: rgb(42, 63, 182);
+    color:white;
+    padding:20px;
+    width: 200px;
+    font-family: cursive;
+    font-weight: 900;
+    border:2px solid rgb(82, 80, 190);
+    transition-property: all;
+    transition-duration: 3s;
+    
+}
+
+.creating-plan-button >button:hover{
+    background-color: rgb(67, 16, 163);
+    font-family: 'Times New Roman', Times, serif;    
+}
+.creating-plan-button >button:focus{
+    background-color: rgb(67, 16, 163);
+    font-family: 'Times New Roman', Times, serif;    
+} */
