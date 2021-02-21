@@ -42,7 +42,7 @@ import React, { Component } from "react";
           <div
             className="App"
             ref="myscroll"
-            style={{ height: "500px", overflow: "auto" }}
+            style={{ height: "550px", overflow: "auto" }}
           >
             
             <ul>
