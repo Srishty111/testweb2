@@ -1,55 +1,60 @@
-import React, { Component } from 'react'
-import './App.css'
-
-function App(){
-
-  var array=[0,0];
-  var a2=0
-
-
-
-  function handleClick(e) {
-    var a= e.target.id
-    if(array[0]!=a && array[1]!=a){
-    a2=array[0]
-    array[0]=array[1]; array[1]=a;
-
-    if(document.getElementById(array[0]))document.getElementById(array[0]).style.backgroundColor='blue'
-    if(document.getElementById(array[1]))document.getElementById(array[1]).style.backgroundColor='blue'
-    if(document.getElementById(a2))document.getElementById(a2).style.backgroundColor='red'
-  }}
-    return (
-      <div class="col">
-      <br/>
-      <br/>
-      <br/>
-        <div class="row">
-        <div class="col" style={{'backgroundColor': 'red'}} id={1} onClick={handleClick}></div>
-        <div class="col" style={{'backgroundColor': 'red'}} id={2} onClick={handleClick}></div>
-        <div class="col" style={{'backgroundColor': 'red'}} id={3} onClick={handleClick}></div>
-        <div class="col" style={{'backgroundColor': 'red'}} id={4} onClick={handleClick}>.</div>
-        </div>
-        <div class="row">
-        <div class="col" style={{'backgroundColor': 'red'}} id={5} onClick={handleClick}></div>
-        <div class="col" style={{'backgroundColor': 'red'}} id={6} onClick={handleClick}></div>
-        <div class="col" style={{'backgroundColor': 'red'}} id={7} onClick={handleClick}></div>
-        <div class="col" style={{'backgroundColor': 'red'}} id={8} onClick={handleClick}>.</div>
-        </div>
-        <div class="row">
-        <div class="col" style={{'backgroundColor': 'red'}} id={9} onClick={handleClick}></div>
-        <div class="col" style={{'backgroundColor': 'red'}} id={10} onClick={handleClick}></div>
-        <div class="col" style={{'backgroundColor': 'red'}} id={11} onClick={handleClick}></div>
-        <div class="col" style={{'backgroundColor': 'red'}} id={12} onClick={handleClick}>.</div>
-        </div>
-        <div class="row">
-        <div class="col" style={{'backgroundColor': 'red'}} id={13} onClick={handleClick}></div>
-        <div class="col" style={{'backgroundColor': 'red'}} id={14} onClick={handleClick}></div>
-        <div class="col" style={{'backgroundColor': 'red'}} id={15} onClick={handleClick}></div>
-        <div class="col" style={{'backgroundColor': 'red'}} id={16} onClick={handleClick}>.</div>
-        </div>
-  
-      </div>
-    )
-  }
-
-export default App
+import React, { Component } from "react";
+    import "./App.css";
+    
+    class App1 extends Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          items: 2,
+          loading: false
+        };
+      }
+      componentDidMount() {
+        // Detect when scrolled to bottom.
+        this.refs.myscroll.addEventListener("scroll", () => {
+          if (
+            this.refs.myscroll.scrollTop + this.refs.myscroll.clientHeight >=
+            this.refs.myscroll.scrollHeight
+          ) {
+            this.loadMore();
+          }
+        });
+      }
+    
+      showItems() {
+        var items = [];
+        for (var i = 0; i < this.state.items; i++) {
+          items.push(<h1 class="text-center"><br/><br/><br/><br/><br/><br/>Hello World
+            <br/><br/><br/><br/><br/><br/></h1>);
+        }
+        return items;
+      }
+    
+      loadMore() {
+        this.setState({ loading: true });
+        setTimeout(() => {
+          this.setState({ items: this.state.items + 2, loading: false });
+        }, 500);
+      }
+    
+      render() {
+        return (
+          <div
+            className="App"
+            ref="myscroll"
+            style={{ height: "500px", overflow: "auto" }}
+          >
+            
+            <ul>
+              {this.showItems()}
+            </ul>
+            {this.state.loading
+              ? null
+              : ""}
+    
+          </div>
+        );
+      }
+    }
+    
+    export default App1;
